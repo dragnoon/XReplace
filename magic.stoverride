@@ -6,7 +6,7 @@ http:
   mitm:
     - peoplego.vankeservice.com
   script:
-    - match: ^https:\/\/peoplego\.vankeservice\.com\/jscp-api\/cloud-people-go-visitor\/npBasInviteRecord\/add\?
+    - match: ^https:\/\/peoplego\.vankeservice\.com\/jscp-api\/cloud-people-go-visitor\/npBasInviteRecord\/add$
       name: zeta-magic
       type: request
       require-body: true
