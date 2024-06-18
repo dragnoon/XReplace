@@ -1,1 +1,18 @@
+name: ZetaMagic
+desc: ZetaMagic
+category: 应用
 
+http:
+  mitm:
+    - peoplego.vankeservice.com
+  script:
+    - match: ^https:\/\/peoplego\.vankeservice\.com\/jscp-api\/cloud-people-go-visitor\/npBasInviteRecord\/add\?
+      name: zeta-magic
+      type: request
+      require-body: true
+      timeout: 15
+
+script-providers:
+  zeta-magic:
+    url: https://raw.githubusercontent.com/dragnoon/XReplace/main/magic.js
+    interval: 86400
